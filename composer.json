@@ -1,0 +1,27 @@
+{
+    "name": "mint/model-wp",
+    "authors": [
+        {
+            "name": "Lounes91",
+            "email": "sebaoui.lounes.pro@gmail.com"
+        }
+    ],
+  "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^4.9",
+        "wpackagist-theme/twentyseventeen": "*",
+        "wpackagist-plugin/akismet": "*"
+    },
+    "extra": {
+      "wordpress-install-dir": "wp",
+      "installer-paths": {
+          "content/plugins/{$name}/": ["type:wordpress-plugin"],
+          "content/themes/{$name}/": ["type:wordpress-theme"]
+      }
+    }
+}
